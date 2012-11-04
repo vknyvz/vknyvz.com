@@ -29,10 +29,6 @@ class IndexController extends vkNgine_Public_Controller
 			$post = $request->getPost();
 			
 			if($form->isValid($post)) {	
-				
-				echo Zend_Json::encode(array('fail' => $this->t->_('Your message were rejected')));
-				exit;
-		
 				if(self::blackListedIPs($_SERVER['REMOTE_ADDR'])){
 					$errors['token'] = array('message' => 'You have been banned from using this contact form');
 					echo Zend_Json::encode(array('fail' => $errors));
@@ -90,39 +86,12 @@ class IndexController extends vkNgine_Public_Controller
     	echo Zend_Json::encode(array('success' => 1));
     	exit;
     }
-    
-    public function portfolioViewAction()
-    {
-    	$file = '/'. $this->_getParam('file');
-    	 
-    	$file = vkNgine_Config::getSystemConfig()->assets->path . '/images/portfolio' . $file;
-    	
-    	$this->_helper->viewRenderer->setNoRender(true);
-    	$this->view->layout()->disableLayout();
-    	
-    	$image = readfile($file);
-    	
-    	header('Content-Type: image/png');
-    	
-    	$modified = new Zend_Date(filemtime($file));
-    	
-    	$this->getResponse()
-	    	 ->setHeader('Last-Modified', $modified->toString(Zend_Date::RFC_1123))
-	    	 ->setHeader('Content-Type', 'image/jpg')
-	    	 ->setHeader('Expires', '', true)
-	    	 ->setHeader('Cache-Control', 'public', true)
-	    	 ->setHeader('Cache-Control', 'max-age=3800')
-	    	 ->setHeader('Pragma', '', true);
-    	
-    	echo $image;
-    }
-    
+        
     public function cvViewAction()
     {
     	$file = '/'. $this->_getParam('file');
-    	$type = '/'. $this->_getParam('type', 'cv');
     	 
-    	$file = vkNgine_Config::getSystemConfig()->assets->path . '' . $type . '/v6' . $file;
+    	$file = vkNgine_Config::getSystemConfig()->assets->path . '/cv/v7' . $file;
     	
     	if(!is_file($file)){
     		echo 'File doesn\'t exist!';
@@ -132,11 +101,10 @@ class IndexController extends vkNgine_Public_Controller
     	$this->_helper->viewRenderer->setNoRender(true);
     	$this->view->layout()->disableLayout();
     	
-    	header('Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document');
-    	header('Content-Disposition: attachment; filename="vknCV.docx"');
-    	header('Content-Length: '.filesize($file));
+    	header('Content-type: application/pdf');
+    	header('Content-Disposition: attachment; filename="Volkan-Yavuz_CV.pdf"');
     	
-    	self::readChunks($file);
+    	readfile($file);
     }
     
     private function readChunks($file)
@@ -164,18 +132,5 @@ class IndexController extends vkNgine_Public_Controller
     	} 
     	
     	return false;
-    }
-    
-    public function portfolioAction()
-    {
-    	$id = $this->_getParam('id');
-	    $id = (int) $id;
-	    
-    	$modelPortfolio = new Public_Model_Portfolio();
-    	$content = $modelPortfolio->fetch($id);
-    	
-    	$this->view->content = $content;   
-    	
-    	$this->_helper->layout->disableLayout();			   
-    }
+    }    
 }

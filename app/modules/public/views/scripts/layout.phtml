@@ -61,9 +61,7 @@ $this->headScript()
             	<li><a id="element1" class="activo"> <span><?= $this->t->_('Profile'); ?></span><br/> <?= $this->t->_('EDUCATION'); ?></a></li>
                 <li><a id="element2"> <span><?= $this->t->_('Work'); ?></span><br/> <?= $this->t->_('EXPERIENCE'); ?></a></li>                
                 <li><a id="element4"> <span><?= $this->t->_('Skill'); ?></span><br/> <?= $this->t->_('TECHNICAL'); ?></a></li>
-                <li><a id="element3"> <span><?= $this->t->_('Portfolio'); ?></span><br/> <?= $this->t->_('OF WORK'); ?></a></li>                
-                <li><a id="element5"> <span><?= $this->t->_('Contact'); ?></span><br/> <?= $this->t->_('ME'); ?></a></li>
-               
+                <li><a id="element5"> <span><?= $this->t->_('Contact'); ?></span><br/> <?= $this->t->_('ME'); ?></a></li>               
             </ul>
         </div>
         <!--End menup -->
@@ -100,7 +98,7 @@ $this->headScript()
 		<!--End info2 -->
 		<div class="info2" >
             <h1>Volkan <span class="orange">Yavuz</span></h1>
-            <h3 class="mail"><?= sprintf($this->t->_('%s Years'), 29); ?></h3>
+            <h3 class="mail"><a href="mailto:<?= $this->config->mail->username; ?>&body=Sent from vknyvz.com">vkn@vknyvz.com</a></h3>
        		<div class="clear"></div>
 			<div class="line"></div>
             <h2 class="work">Jackson Heights, Queens</h2>
@@ -143,9 +141,10 @@ $this->headScript()
    <!-- End footer -->	
 <script>
 	$('#cv').bind('click', function() {
-		alert('<?= $this->t->_('Resume is not available\n\nNot looking for any new oppurtunities at this time'); ?>');
+		window.top.location = '/index/cv-view/file/Volkan-Yavuz_CV.pdf';			
 		return false;
 	});
+	
 	$('.language').bind('click', function() {
 		var lang = $(this).attr('rel');
 		$.ajax( {

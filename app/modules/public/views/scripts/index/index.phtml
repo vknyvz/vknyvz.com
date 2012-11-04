@@ -59,42 +59,6 @@
                  
           <!-- End contright -->
           <div style="clear:both">
-       </div>  
-       
-       <div class="element3">
-   <div class="contleft"> 
-     	<div class="left">
-      <h2 style="text-align:right;"><?= $this->t->_('Portfolio'); ?><br/><span class="orange"><?= $this->t->_('OF WORK'); ?></span></h2>		</div>
-     </div>
-        
-        <div id="portfolioItem"></div>
-        
-        <!--  Begin post -->
-        <div class="post">
-        	<div class="post_content">
-            	<div class="partcontent">
-            	
-            	<div class="sponsorListHolder">
-                  
-                <?php foreach($this->portfolio->fetchAll() as $portfolio) : ?>
-				<div class="sponsor" id="<?= $portfolio['portfolioId']; ?>" title="<?= $portfolio['portfolioName']; ?>">
-					<div class="sponsorFlip">
-						<a href="javascript:void(0);" title="<?= $this->t->_('more'); ?>">
-							<img src="<?= $this->publicUrl('portfolio-view', null); ?>/file/<?= $portfolio['portfolioImage']; ?>" alt="<?= $portfolio['portfolioName']; ?>" />
-						</a>
-					</div>										
-				</div>
-				<?php endforeach; ?>				
-			</div>
-            	</div>
-                  <!--  End content1 -->
-            </div>
-        </div>
-        <!--  End post -->
-       
-         </div>
-          <!-- End contright -->
-          <div style="clear:both">
        </div>
        
              <div class="element4">
