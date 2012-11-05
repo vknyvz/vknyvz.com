@@ -183,7 +183,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 		}
 				
 	    $options = array(
-	       'jquery_path' => 'http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js',
+	       'jquery_path' => 'http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js',
 	       'plugins' => array('Variables',
 						      'Html',
 						      'Database',
