@@ -1,5 +1,5 @@
-Personal Web site (v1 build 72, 11/4/2012)
-=============================================
+Personal Web site 
+-------------------------------------------------
 
 ### Application Full Source Code ###
 
@@ -17,6 +17,8 @@ Application has an admin panel to manage its content. It has the following featu
           - Comprehensive Logging System for the entire application, all actions are logged.
 
 It can be viewed from http://www.vknyvz.com <br>
+
+v1 build 72, 11/4/2012
 
 Volkan Yavuz <br>
 Software Engineer
