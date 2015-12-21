@@ -8,9 +8,9 @@
  * Controller of the vApp
  */
 angular.module('vApp').controller('MainController', [
-	'$scope', 
-	function ($scope) {
-		$http.get("http://www.w3schools.com/angular/customers.php")
+	'$scope', '$http', 
+	function ($scope, $http) {
+		$http.get("/get/bla.php")
 	    	.then(function(response) {$scope.names = response.data.records;});
 		
 		//$scope.profile = 'bla4';
