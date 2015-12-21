@@ -5,8 +5,8 @@
     <div class="element1">
     <!--Begin contleft -->
     <div class="contleft"> 
-     	<div class="left">
-      <h2 style="text-align:right;">Profile<br/><span class="orange">EDUCATION</span></h2>		</div>
+     	<div class="left" ng-controller="MainController">
+      <h2 style="text-align:right;" cufon-replace-directive>Profile<br/><span class="orange">EDUCATION</span></h2>		</div>
      </div>
      <!--End contleft -->     
    
@@ -15,7 +15,7 @@
         	<div class="post_content">
             	<div class="partcontent">
             	
-            	profile goes here
+            	{{profile}}
 				
 				</div>
                   <!--  End content1 -->
@@ -109,7 +109,7 @@
    </div>
    <!-- End Main page posts -->
 </div>
-
+</div>
 <script>
 	$('#name').bind('blur', function() {
 		if(this.value=='')this.value='Name';
@@ -136,8 +136,7 @@
 
 	function contactFormSuccess(data)
 	{
-		if (!data.success)  {
-			
+		if (!data.success)  {			
 			$('.result').html('<div class="error">' + data.fail + '</div>');		
 		} else {
 			
