@@ -25,4 +25,4 @@
 
 ## Changelog
 - Version 0.0.1
-	- initial build
+	- initial build for this new Angular app

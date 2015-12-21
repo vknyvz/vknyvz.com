@@ -10,5 +10,6 @@
 angular.module('vApp').controller('MainController', [
 	'$scope', 
 	function ($scope) {
+		
 	}
 ]);

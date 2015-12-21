@@ -31,5 +31,5 @@ var vApp = angular
       });
   })
   .run(function ($rootScope) {
-     $rootScope.title = 'vApp';
+     $rootScope.title = 'vknyvz[dot]com';
 });

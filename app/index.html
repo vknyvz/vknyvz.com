@@ -21,7 +21,6 @@
 	<link href="styles/colorbox.css" rel="stylesheet" type="text/css" >
 	<link href="styles/styles.css"  rel="stylesheet" type="text/css" >
 	<link href="styles/jquery-ui-1.8.13.custom.css" rel="stylesheet" type="text/css" >    
-    <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
   <body>
@@ -29,48 +28,119 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     
-    <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-
-            <a class="navbar-brand" href="#/">vApp</a>
-          </div>
-
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
-
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+	<div style="position:absolute;top:0;left:0">
+		<a href="javascript:void(0);" class="language" rel="tr">
+			<img src="images/Turkey.png" alt="Türkçe" width="32" height="32">
+		</a>
+		<a href="javascript:void(0);" class="language" rel="en">
+			<img src="images/Us.png" alt="English" width="32" height="32">
+		</a>
+	</div>	  	        
+		<!--Begin contheader -->
+		<div class="contheader">
+		    <!--Begin contmenu -->
+			<div class="contmenu">
+			   <!--Begin social --> 
+		       <div class="social">
+		        	<div class="soc" id="r1"><a href="http://www.facebook.com/vknyvz" id="social1" target="_blank">Facebook</a></div>
+	                <div class="soc" id="r2"><a href="http://twitter.com/vknyvz" id="social2" target="_blank">Twitter</a></div>
+	                <div class="soc" id="r3"><a href="http://linkedin.com/in/vknyvz" id="social3" target="_blank">Linkedin</a></div>
+		        </div>
+		        <!--End social --> 
+		        
+	        <!--Begin menup --> 
+	        <div class="menup">
+	            <ul class="menu" id="menu">
+	            	<li><a id="element1" class="activo"> <span>Profile</span><br/> EDUCATION</a></li>
+	                <li><a id="element2"> <span>Work</span><br/> EXPERIENCE</a></li>                
+	                <li><a id="element4"> <span>Skill</span><br/> TECHNICAL</a></li>
+	                <li><a id="element5"> <span>Contact</span><br/> ME</a></li>               
+	            </ul>
+	        </div>
+	        <!--End menup -->
+	        
+	       <div style="clear:both;"></div>  
+		     <div class="cur"></div>
+		     <div class="cur2"></div>
+		</div>
+	     <!--End contmenu -->
+		
+		 <!--Begin header -->
+	    <div class="header" >
+	     <!--End part1 -->
+	     <div class="part1">
+	    	<!--Begin logo --> 
+	    	<div class="logo" >
+	            <a  class="image" id="logo"><img src="/images/photo.png" alt="Volkan Yavuz" /></a> 
+	        </div>
+	        <!--End logo -->  
+	        
+	        <!--Begin info --> 
+	        <div class="info" ng-controller="MainController">
+	             <h1  cufon-replace-directive>Volkan <span class="orange">Yavuz</span></h1>
+	             <h3 class="mail"  cufon-replace-directive><a href="mailto:<?= $this->config->mail->username; ?>&body=Sent from vknyvz.com">vkn@vknyvz.com</a></h3>
+	             <div class="clear"></div>
+			     <div class="line"></div>
+	             <h2 class="work">Software Engineer</h2>
+	             <h2 class="telf">(530) 6-VOLKAN</h2>
+	             <div class="clear"></div>
+	             <div class="line2"></div>
+	        </div>
+	         <!--End info -->
+	
+			<!--End info2 -->
+			<div class="info2" ng-controller="MainController">
+	            <h1 class="convert" ng-bind="content" cufonReplaceDirective>Volkan <span class="orange">Yavuz</span></h1>
+	            <h3 class="mail"><a href="mailto:<?= $this->config->mail->username; ?>&body=Sent from vknyvz.com">vkn@vknyvz.com</a></h3>
+	       		<div class="clear"></div>
+				<div class="line"></div>
+	            <h2 class="work">New York, New York</h2>
+	            <h2 class="telf">New York, USA</h2>
+	            <div class="clear"></div>
+	            <div class="line2"></div>
+	        </div>
+	         <!--End info2 -->
+	
+			<div class="clear"></div>
+	         
+	    </div>
+	    <!--End header -->
+	    <div class="clear"></div>
+	   </div>
+	   <!--End contheader -->
+	      
+	  <!--Begin botones -->
+	  <div class="cont2">
+	  <div class="botones">
+		<a href="#" class="top" >top</a>
+	  </div>
+	  <!--End botones -->
+	  </div>
+	</div>
+	<!--End contheader -->
+    
 
     <div class="container">
     	<div ng-view=""></div>
     </div>
-
-    <div class="footer">
-      <div class="container">
-        <p><a href="mailto:vkn@vknyvz.com">Volkan Yavuz</a></p>
-      </div>
-    </div>
     
+    <!-- Begin footer -->
+    <div class="footer" id="footer">
+   		<p class="copy">Application written by Volkan Yavuz <span class="orange">|</span> Copyright &copy; 2015 <span class="orange">|</span> v1.0.72 </p>
+        <ul class="menufooter">
+        	<li><img src="/images/indicador2.jpg" alt="Download CV" /><a id="cv" target="_blank" href="javascript:void(0);">Download CV</a></li>           
+            <li><img src="/images/indicador2.jpg" alt="Email Me" /><a href="mailto:vkn@vknyvz.com&body=Sent from vknyvz.com">Email Me </a></li>
+        </ul>
+    </div>
+    <!-- End footer -->
+   
     <script>
        !function(v,o,l,k,a,n){v.GoogleAnalyticsObject=l;v[l]||(v[l]=function(){
    	   (v[l].q=v[l].q||[]).push(arguments)});v[l].l=+new Date;a=o.createElement(k);
    	   n=o.getElementsByTagName(k)[0];a.src='//www.google-analytics.com/analytics.js';
    	   n.parentNode.insertBefore(a,n)}(window,document,'ga','script');
 
-   	   ga('create', 'UA-XXXXX-X', 'auto');
+   	   ga('create', 'UA-1250391-1', 'auto');
    	   ga('send', 'pageview');
     </script>
 
@@ -93,11 +163,15 @@
     <script src="router.js"></script>
     
     <!-- vApp Module -->
-    <script src="modules/vApp/core/controllers/mainController.js"></script>
-    <script src="modules/vApp/core/directives/directive.js"></script>
-    <script src="modules/vApp/core/filters/filter.js"></script>
-    <script src="modules/vApp/core/services/service.js"></script>
-    <script src="modules/vApp/core/directives/directive.js"></script>
+    <script src="modules/vApp/site/controllers/mainController.js"></script>
+    <script src="modules/vApp/site/directives/cufonReplaceDirective.js"></script>
+    <script src="modules/vApp/site/filters/filter.js"></script>
+    <script src="modules/vApp/site/services/service.js"></script>
+    
+    <!-- vknyvz.com files -->
+    <script src="https://cdn.rawgit.com/sorccu/cufon/1.09i/js/cufon.js" type="text/javascript"></script>
+    <script src="external/Yanone_Kaffeesatz_5F400.font.js"></script>
+    <script src="external/Journal_5F400.font.js"></script>
     
     <!-- endbuild -->
 </body>
