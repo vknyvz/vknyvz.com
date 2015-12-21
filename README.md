@@ -1,6 +1,4 @@
-# vApp 
-
-My Skeleton Angular App for building apps using AngularJS  
+# Personal Web site
 
 * [Requirements](#requirements)
 * [Authors](#authors)
@@ -11,11 +9,15 @@ My Skeleton Angular App for building apps using AngularJS
 - NodeJS (so you can use NPM)
 - Grunt
 - Bower
+- Zend Framework1
 - AngularJS 1.2+
 - Grunt
 - Bower
 - Sass (optional)
 - Twitter Bootstrap3 (optional)
+
+## Features
+	- `/admin` panel that controls the front-end data
 
 ## Authors
 
