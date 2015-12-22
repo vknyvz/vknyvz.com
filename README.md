@@ -17,7 +17,7 @@
 - Twitter Bootstrap3 (optional)
 
 ## Features
-	- `/admin` panel that controls the front-end data
+	- `/api/admin` panel that controls the front-end data
 
 ## Authors
 
