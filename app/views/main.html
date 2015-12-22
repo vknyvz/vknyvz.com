@@ -5,7 +5,7 @@
     <div class="element1">
     <!--Begin contleft -->
     <div class="contleft"> 
-     	<div class="left" ng-controller="MainController">
+     	<div class="left">
       <h2 style="text-align:right;" cufon-replace-directive>Profile<br/><span class="orange">EDUCATION</span></h2>		</div>
      </div>
      <!--End contleft -->     
@@ -13,10 +13,7 @@
         <!--  Begin post -->
         <div class="post">
         	<div class="post_content">
-            	<div class="partcontent">
-            	
-            	{{profile}}
-				
+            	<div class="partcontent" ng-bind-html="profile">
 				</div>
                   <!--  End content1 -->
             </div>
@@ -38,10 +35,7 @@
         <!--  Begin post -->
         <div class="post">
         	<div class="post_content">
-            	<div class="partcontent">
-            	
-	              	work stuff goes here
-				
+            	<div class="partcontent" ng-bind-html="work">
             	</div>
                   <!--  End content1 -->
             </div>
@@ -63,8 +57,7 @@
         <!--  Begin post -->
         <div class="post">
         	<div class="post_content">
-            	<div class="partcontent">            		
-					skill goes here
+            	<div class="partcontent" ng-bind-html="skill">
             	</div>
                   <!--  End content1 -->                                    
             </div>
@@ -89,11 +82,10 @@
         	<div class="post_content">
             	<div class="partcontent">
             	            	
-            	<h3>Please fill out the form</h3>
+            	<h3>vkn@vknyvz.com</h3>
             		
-            		<div class="result"></div>
-            		
-            		there supposed to be a form here
+            		<p>Contact form is disabled, contact me via email</p>
+            	
             		
                 </div>
                   <!--  End content1 -->
@@ -110,77 +102,3 @@
    <!-- End Main page posts -->
 </div>
 </div>
-<script>
-	$('#name').bind('blur', function() {
-		if(this.value=='')this.value='Name';
-	});
-	$('#name').bind('focus', function() {
-		if(this.value=='Name')this.value='';
-	});	
-	$('#email').bind('blur', function() {
-		if(this.value=='')this.value='Email';
-	});
-	$('#email').bind('focus', function() {
-		if(this.value=='Email')this.value='';
-	});
-	$('#message').bind('blur', function() {
-		if(this.value=='')this.value='Message';
-	});
-	$('#message').bind('focus', function() {
-		if(this.value=='Message')this.value='';
-	});	
-
-	$('.sponsor').bind('click', function() {
-		portfolioItem($(this).attr('id'), $(this).attr('title'));	
-	});	
-
-	function contactFormSuccess(data)
-	{
-		if (!data.success)  {			
-			$('.result').html('<div class="error">' + data.fail + '</div>');		
-		} else {
-			
-			$('.result').html("<div class=\"success\">Thank you for your email</div>");
-		}		
-	}
-
-	function portfolioItem(id, title)
-	{
-		portfolioId = id;
-		$("#portfolioItem").dialog('open');
-		$("#portfolioItem").dialog({title: title});
-				
-		$.ajax( {
-		        url: "/index/portfolio/id/" + portfolioId, 
-		        success: function(returnData) { 
-			        $('#portfolioItem').html(returnData);		           
-		    	}
-		       }
-		    )   	
-	}
-
-	$(document).ready(function() {
-		var options = {  
-			url: '',
-			success: contactFormSuccess,
-			dataType : 'json'		
-		};
-
-		//$('#formid').ajaxForm(options);
-
-		
-	/*	$("#portfolioItem").dialog({
-				resizable: false,
-				autoOpen: false,
-				modal: true,
-				width: 450,
-				height: 260,
-				overlay: {
-					backgroundColor: '#000',
-					opacity: -25
-				}		
-			});		
-		*/
-		
-	});
-</script>

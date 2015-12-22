@@ -1,0 +1,179 @@
+<?php
+
+define('IN_DEVELOPMENT', APPLICATION_ENV === 'development');
+
+$this->headLink(array('rel' => 'icon', 'href' => $this->baseUrl('V.ico'), 'type' => 'image/x-icon'))
+	 ->prependStylesheet($this->baseUrl('/css/style.css'))
+ 	 ->appendStylesheet($this->baseUrl('/css/colorbox.css'))
+	 ->appendStylesheet($this->baseUrl('/css/styles.css'))
+	 ->appendStylesheet($this->baseUrl('/css/jquery-ui-1.8.13.custom.css'));
+
+$this->headScript()
+	 ->prependFile($this->baseUrl('/js/jquery-1.7.1.js'))
+ 	 ->appendFile($this->baseUrl('/js/form.js'))
+	 ->appendFile($this->baseUrl('/js/jquery-ui-1.8.7.custom.min.js'))
+	 ->appendFile($this->baseUrl('/js/jquery.colorbox.js'))
+	 ->appendFile($this->baseUrl('/js/cufon.js'))
+	 ->appendFile($this->baseUrl('/js/Yanone_Kaffeesatz_5F400.font.js'))
+	 ->appendFile($this->baseUrl('/js/Opificio_5F400.font.js'))
+	 ->appendFile($this->baseUrl('/js/Journal_5F400.font.js'))
+	 ->appendFile($this->baseUrl('/js/jquery-ui-1.8.7.custom.min.js'))
+	 ->appendFile($this->baseUrl('/js/init.js'));
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<!--[if lt IE 8]>
+		<link href="<?= $this->baseUrl('/css/styleie.css')?>" rel="stylesheet" type="text/css" />
+	<![endif]-->
+<?php 
+	echo $this->headTitle() . "\n";
+	echo $this->headMeta()  . "\n";
+	echo $this->headLink()  . "\n";
+	echo $this->headScript(). "\n";	
+?>		
+</head>
+		
+<body vkNgine_version="<?= vkNgine_Version::VERSION; ?>" >
+<div style="position:absolute;top:0;left:0">
+	<a href="javascript:void(0);" class="language" rel="tr">
+		<img src="/images/Turkey.png" alt="Türkçe" width="32" height="32">
+	</a>
+	<a href="javascript:void(0);" class="language" rel="en">
+		<img src="/images/Us.png" alt="English" width="32" height="32">
+	</a>
+</div>	  	        
+	<!--Begin contheader -->
+	<div class="contheader">
+	    <!--Begin contmenu -->
+		<div class="contmenu">
+		   <!--Begin social --> 
+	       <div class="social">
+	        	<div class="soc" id="r1"><a href="http://www.facebook.com/vknyvz" id="social1" target="_blank">Facebook</a></div>
+                <div class="soc" id="r2"><a href="http://twitter.com/vknyvz" id="social2" target="_blank">Twitter</a></div>
+                <div class="soc" id="r3"><a href="http://linkedin.com/in/vknyvz" id="social3" target="_blank">Linkedin</a></div>
+	        </div>
+	        <!--End social --> 
+	        
+        <!--Begin menup --> 
+        <div class="menup">
+            <ul class="menu" id="menu">
+            	<li><a id="element1" class="activo"> <span><?= $this->t->_('Profile'); ?></span><br/> <?= $this->t->_('EDUCATION'); ?></a></li>
+                <li><a id="element2"> <span><?= $this->t->_('Work'); ?></span><br/> <?= $this->t->_('EXPERIENCE'); ?></a></li>                
+                <li><a id="element4"> <span><?= $this->t->_('Skill'); ?></span><br/> <?= $this->t->_('TECHNICAL'); ?></a></li>
+                <li><a id="element5"> <span><?= $this->t->_('Contact'); ?></span><br/> <?= $this->t->_('ME'); ?></a></li>               
+            </ul>
+        </div>
+        <!--End menup -->
+        
+       <div style="clear:both;"></div>  
+	     <div class="cur"></div>
+	     <div class="cur2"></div>
+	</div>
+     <!--End contmenu -->
+	
+	 <!--Begin header -->
+    <div class="header" >
+     <!--End part1 -->
+     <div class="part1">
+    	<!--Begin logo --> 
+    	<div class="logo" >
+            <a  class="image" id="logo"><img src="/images/photo.png" alt="Volkan Yavuz" /></a> 
+        </div>
+        <!--End logo -->  
+        
+        <!--Begin info --> 
+        <div class="info" >
+             <h1>Volkan <span class="orange">Yavuz</span></h1>
+             <h3 class="mail"><a href="mailto:<?= $this->config->mail->username; ?>&body=Sent from vknyvz.com">vkn@vknyvz.com</a></h3>
+             <div class="clear"></div>
+		     <div class="line"></div>
+             <h2 class="work"><?= $this->t->_('Software Engineer'); ?></h2>
+             <h2 class="telf">(530) 6-VOLKAN</h2>
+             <div class="clear"></div>
+             <div class="line2"></div>
+        </div>
+         <!--End info -->
+
+		<!--End info2 -->
+		<div class="info2" >
+            <h1>Volkan <span class="orange">Yavuz</span></h1>
+            <h3 class="mail"><a href="mailto:<?= $this->config->mail->username; ?>&body=Sent from vknyvz.com">vkn@vknyvz.com</a></h3>
+       		<div class="clear"></div>
+			<div class="line"></div>
+            <h2 class="work">Jackson Heights, Queens</h2>
+            <h2 class="telf">New York, <?= $this->t->_('USA'); ?></h2>
+            <div class="clear"></div>
+            <div class="line2"></div>
+        </div>
+         <!--End info2 -->
+
+		<div class="clear"></div>
+         
+    </div>
+    <!--End header -->
+    <div class="clear"></div>
+   </div>
+   <!--End contheader -->
+      
+  <!--Begin botones -->
+  <div class="cont2">
+  <div class="botones">
+	<a href="#" class="top" >top</a>
+  </div>
+  <!--End botones -->
+  </div>
+</div>
+<!--End contheader -->
+
+	<?= $this->layout()->content; ?>	
+
+<!-- Begin footer -->
+
+ <div class="footer" id="footer">
+   		<p class="copy"><?= sprintf($this->t->_('Application written by %s'), 'Volkan Yavuz'); ?> <span class="orange">|</span> <?= sprintf($this->t->_('Copyright &copy; %s'), date('Y')); ?> <span class="orange">|</span> v<?= vkNgine_Version::APP_VERSION; ?> </p>
+        <ul class="menufooter">
+        	<li><img src="/images/indicador2.jpg" alt="<?= $this->t->_('Download CV'); ?>" /><a id="cv" target="_blank" href="javascript:void(0);"><?= $this->t->_('Download CV'); ?></a></li>           
+            <li><img src="/images/indicador2.jpg" alt="<?= $this->t->_('Email Me'); ?>" /><a href="mailto:<?= $this->config->mail->username; ?>&body=<?= $this->t->_('Sent from vknyvz.com'); ?>"><?= $this->t->_('Email Me'); ?> </a></li>
+        </ul>
+   </div>
+   
+   <!-- End footer -->	
+<script>
+	$('#cv').bind('click', function() {
+		alert('Not looking for any new oppurtunites at this time.')
+		return false;
+	});
+	
+	$('.language').bind('click', function() {
+		var lang = $(this).attr('rel');
+		$.ajax( {
+	        url: '/index/language/lang/' + lang, 
+	        dataType : 'json',
+	        success: function(data) { 
+		        if(data.success)	
+		        	window.top.location = '/';	           
+	    	}
+	    });
+		return false;
+	});
+	$(document).ready(function(){
+		$('.selectBox').html('Language');
+	});
+</script>
+<?php if(vkNgine_Config::getSystemConfig()->settings->ga->enabled) : ?>	
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', '<?= vkNgine_Config::getSystemConfig()->settings->ga->code; ?>']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<?php endif; ?>
+
+</body>
+</html>	

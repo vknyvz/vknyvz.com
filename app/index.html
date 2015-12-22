@@ -20,22 +20,13 @@
 	
 	<link href="styles/style.css" rel="stylesheet" type="text/css" >
 	<link href="styles/styles.css"  rel="stylesheet" type="text/css" >
-	<link href="styles/jquery-ui-1.8.13.custom.css" rel="stylesheet" type="text/css" >    
     <!-- endbuild -->
   </head>
-  <body ng-controller="MainController">
+  <body>
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    
-	<div style="position:absolute;top:0;left:0">
-		<a href="javascript:void(0);" class="language" rel="tr">
-			<img src="images/Turkey.png" alt="Türkçe" width="32" height="32">
-		</a>
-		<a href="javascript:void(0);" class="language" rel="en">
-			<img src="images/Us.png" alt="English" width="32" height="32">
-		</a>
-	</div>	  	        
+      	        
 		<!--Begin contheader -->
 		<div class="contheader">
 		    <!--Begin contmenu -->
@@ -78,7 +69,7 @@
 	        <!--Begin info --> 
 	        <div class="info">
 	             <h1 cufon-replace-directive>Volkan <span class="orange">Yavuz</span></h1>
-	             <h3 class="mail" cufon-replace-directive><a href="mailto:<?= $this->config->mail->username; ?>&body=Sent from vknyvz.com">vkn@vknyvz.com</a></h3>
+	             <h3 class="mail" cufon-replace-directive><a href="mailto:vkn@vknyvz.com&body=Sent from vknyvz.com">vkn@vknyvz.com</a></h3>
 	             <div class="clear"></div>
 			     <div class="line"></div>
 	             <h2 class="work">Software Engineer</h2>
@@ -89,9 +80,9 @@
 	         <!--End info -->
 	
 			<!--End info2 -->
-			<div class="info2" ng-controller="MainController">
+			<div class="info2">
 	            <h1 cufon-replace-directive>Volkan <span class="orange">Yavuz</span></h1>
-	            <h3 class="mail" cufon-replace-directive><a href="mailto:<?= $this->config->mail->username; ?>&body=Sent from vknyvz.com">vkn@vknyvz.com</a></h3>
+	            <h3 class="mail" cufon-replace-directive><a href="mailto:vkn@vknyvz.com&body=Sent from vknyvz.com">vkn@vknyvz.com</a></h3>
 	       		<div class="clear"></div>
 				<div class="line"></div>
 	            <h2 class="work">New York, New York</h2>
@@ -119,16 +110,13 @@
 	</div>
 	<!--End contheader -->
     
-
-    <div>
-    	<div ng-view=""></div>
-    </div>
-    
+    <div ng-view=""></div>
+        
     <!-- Begin footer -->
     <div class="footer" id="footer">
    		<p class="copy">Application written by Volkan Yavuz <span class="orange">|</span> Copyright &copy; 2015 <span class="orange">|</span> v1.0.72 </p>
-        <ul class="menufooter">
-        	<li><img src="/images/indicador2.jpg" alt="Download CV" /><a id="cv" target="_blank" href="javascript:void(0);">Download CV</a></li>           
+        <ul class="menufooter" ng-controller="ClickController">
+        	<li><img src="/images/indicador2.jpg" alt="Download CV" /><a ng-click="cv()">Download CV</a></li>           
             <li><img src="/images/indicador2.jpg" alt="Email Me" /><a href="mailto:vkn@vknyvz.com&body=Sent from vknyvz.com">Email Me </a></li>
         </ul>
     </div>
@@ -162,17 +150,18 @@
     <script src="app.js"></script>
     <script src="router.js"></script>
     
-    <!-- vApp Module -->
+    <!-- vknyvz.com files -->
     <script src="modules/vApp/site/controllers/mainController.js"></script>
+	<script src="modules/vApp/site/controllers/clickController.js"></script>
     <script src="modules/vApp/site/directives/cufonReplaceDirective.js"></script>
     <script src="modules/vApp/site/filters/filter.js"></script>
     <script src="modules/vApp/site/services/service.js"></script>
     
-    <!-- vknyvz.com files -->
+    <!-- endbuild -->
+  
+    <!-- external files -->  
     <script src="https://cdn.rawgit.com/sorccu/cufon/1.09i/js/cufon.js" type="text/javascript"></script>
     <script src="external/Yanone_Kaffeesatz_5F400.font.js"></script>
     <script src="external/Journal_5F400.font.js"></script>
-    
-    <!-- endbuild -->
 </body>
 </html>
