@@ -4,7 +4,7 @@ This will install the core WordPress files with modified structure.
 
 * [Requirements](#requirements)
 * [Installation](#installation)
-* [Plugin Structure](#pluginstructure)
+* [Plugin Structure](#plugin-structure)
 
 ### Requirements
 
