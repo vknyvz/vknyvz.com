@@ -3,6 +3,8 @@ Personal Web site
 
 ### Application Full Source Code ###
 
+#### This is no longer maintained, new app is at [vkNgine](https://github.com/vknyvz/vkNGine) branch. ####
+
 #### Technology ####
  - Written for LAMP environment. <br>
  - OO PHP5, MySQL, Zend Framework, jQuery. <br>
